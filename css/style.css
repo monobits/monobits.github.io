@@ -1840,4 +1840,7 @@ form label {
   opacity: 0;
 }
 
+.custom-font {
+  font-family: "Sacramento", Arial, serif;
+}
 /*# sourceMappingURL=style.css.map */
