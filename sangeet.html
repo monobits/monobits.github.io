@@ -203,6 +203,12 @@ The Bhatia Family </p>
 					</p>
 				</div>
 			</div>
+
+									<!-- END of FOOTER SECTION -->
+  <audio id = "myAudio" controls autoplay loop style = "overflow: hidden; width: 100%; background-color: #fc001b; margin-left: 0%; margin-top: 0.5%;">
+    <source src="sound/gal.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>   
 		</div>
 	</footer>
 	</div>
@@ -233,6 +239,43 @@ The Bhatia Family </p>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+
+		<script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js">
+      </script> 
+      <script type="text/javascript">
+        if(window.innerWidth > 650){
+          $(document).ready(function(){
+            document.getElementById("myAudio").volume = 0.0;
+            bootbox.prompt({
+              title: "This webpage contains audio.",
+              size : 'medium',
+              inputType: 'checkbox',
+              inputOptions: [
+                {
+                  text: 'Enable Audio Automatically?',
+                  value: 'yes',
+                }
+              ],
+              callback: function (result) {
+                if(result=='yes'){
+                  document.getElementById("myAudio").volume = 1.0;
+                }
+                else{
+                  document.getElementById("myAudio").volume = 0.0;
+                }
+              }
+            }
+                          );
+          }
+                           );
+        }
+        else{
+          $(document).ready(function(){
+            alert("This webpage contains audio. You can enable/disable it by audio player at the bottom of webpage");
+          }
+                           );
+        }
+      </script>   
 	</body>
 </html>
 
